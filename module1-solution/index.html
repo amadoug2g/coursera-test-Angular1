@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="ListCounter">
+<html lang="en" ng-app="LunchCheck">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="angular.min.js"></script>
-        <script src="index.js"></script>
         
         <title>Submission</title>
     </head>
-    <body ng-controller="ListCounterController">
-        <h1>Element Counter</h1>
+    <body ng-controller="LunchCheckController">
+        <h1>Lunch Check</h1>
         <div>
-            <input type="text" 
-            ng-model="input_list">
-        <button type="button" ng-click="message();">Check If Too Much</button>
-        <br>
-        
-        Message: {{ counter }}
-        </div>      
+            <input type="text" ng-model="list">
+            <br>
+            <br>
+            List : {{ output }}
+            <br>
+            List Length: {{ listSize }}
+            <br>
+            <button ng-click="processInput();">Check If Too Much</button>
+            <br>
+            ==> {{ msg }}
+        </div>
+
+        <script src="angular.min.js"></script>
+        <script src="index.js"></script>
     </body>
 </html>
