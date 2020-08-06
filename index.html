@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="NameCalculator">
+<html lang="en" ng-app="DIApp">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="angular.min.js"></script>
         <script src="app.js"></script>
-        <title>Name Calculator</title>
+        <title>UpperCase Name</title>
     </head>
-    <h1>Name Calculator</h1>
-    <div ng-controller="NameCalculatorController">
+    <h1>UpperCase</h1>
+    <div ng-controller="DIController">
         <input type="text" 
             ng-model="name"
-            ng-keyup="displayValue();">
+            ng-blur="upper();"
+            ng-focus="lower();"
+        ng-keyup="getText(); listElm(); message()">
         <br>
         Total Numeric value of person's name: {{ totalValue }}.
+        <br>
+        Input is: {{ text }}.
+        <br>
+        Output is: {{ output }}.
+        <br>
+        Length is: {{ outputLen }}.
+        <br>
+        Is it too much? ==> {{ msg }}.
     </div>
 </html>
