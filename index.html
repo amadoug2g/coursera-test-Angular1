@@ -10,19 +10,14 @@
     <h1>UpperCase</h1>
     <div ng-controller="DIController">
         <input type="text" 
-            ng-model="name"
-            ng-blur="upper();"
-            ng-focus="lower();"
-        ng-keyup="getText(); listElm(); message()">
+            ng-model="list">
         <br>
-        Total Numeric value of person's name: {{ totalValue }}.
+        List : {{ output }}
         <br>
-        Input is: {{ text }}.
+        List Length: {{ listSize }}
         <br>
-        Output is: {{ output }}.
+        <button ng-click="processInput();">Check If Too Much</button>
         <br>
-        Length is: {{ outputLen }}.
-        <br>
-        Is it too much? ==> {{ msg }}.
+        ==> {{ msg }}
     </div>
 </html>
